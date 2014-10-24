@@ -19,6 +19,9 @@ describe AddressCapture do
     post '/', {
       'address' => @address
     }
+
+    expect(last_response.status).to eq(302)
+    expect(last_response.header['Location']).to eq(ENV['THANK_YOU_PAGE'])
   end
 
   it "should not post if the honeypot is present" do
