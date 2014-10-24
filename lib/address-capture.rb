@@ -7,7 +7,7 @@ Dotenv.load
 class AddressCapture < Sinatra::Base
 
   post '/' do
-    unless !params['agree_to_terms'].nil?
+    unless !params['agree_to_terms'].empty?
       HTTParty.post(ENV['GOOGLE_DOCS_FORM_URL'], query: {
           "#{ENV['GOOGLE_DOCS_ADDRESS_ELEMENT']}" => params['address'],
           "#{ENV['GOOGLE_DOCS_IP_ADDRESS_ELEMENT']}" => request.ip,

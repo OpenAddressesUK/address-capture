@@ -17,7 +17,8 @@ describe AddressCapture do
                               })
 
     post '/', {
-      'address' => @address
+      'address' => @address,
+      'agree_to_terms' => ""
     }
 
     expect(last_response.status).to eq(302)
