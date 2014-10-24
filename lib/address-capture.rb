@@ -8,7 +8,7 @@ class AddressCapture < Sinatra::Base
 
   post '/' do
     unless !params['agree_to_terms'].empty?
-      HTTParty.post(ENV['GOOGLE_DOCS_FORM_URL'], query: {
+      HTTParty.post(ENV['GOOGLE_DOCS_FORM_URL'], body: {
           "#{ENV['GOOGLE_DOCS_ADDRESS_ELEMENT']}" => params['address'],
           "#{ENV['GOOGLE_DOCS_IP_ADDRESS_ELEMENT']}" => request.ip,
           "#{ENV['GOOGLE_DOCS_USER_AGENT_ELEMENT']}" => request.user_agent || "Not provided",
