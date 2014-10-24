@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.1.3
+env:
+  global:
+    - GOOGLE_DOCS_FORM_URL="https://docs.google.com/a/theodi.org/forms/d/1OF-0Wg6p-LZYaEC4abosHBk8D4SATZdYsddprrIjt2k/formResponse"
+    - GOOGLE_DOCS_ADDRESS_ELEMENT="entry.91662767"
+    - GOOGLE_DOCS_IP_ADDRESS_ELEMENT="entry.249271742"
+    - GOOGLE_DOCS_USER_AGENT_ELEMENT="entry.9825111"
+    - THANK_YOU_PAGE="http://openaddressesuk.github.io/"
