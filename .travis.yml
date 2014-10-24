@@ -8,6 +8,8 @@ env:
   - GOOGLE_DOCS_IP_ADDRESS_ELEMENT="entry.249271742"
   - GOOGLE_DOCS_USER_AGENT_ELEMENT="entry.9825111"
   - THANK_YOU_PAGE="http://openaddressesuk.github.io/"
+  - GOOGLE_DOCS_FBZX_VALUE="-5388958579521340185"
+  - GOOGLE_DOCS_DRAFT_RESPONSE_VALUE=[,,"-5388958579521340185"]
 deploy:
   provider: heroku
   strategy: api

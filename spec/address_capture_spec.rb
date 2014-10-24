@@ -10,8 +10,8 @@ describe AddressCapture do
     expect(HTTParty).to receive(:post).with(ENV['GOOGLE_DOCS_FORM_URL'], body: {
                                   "#{ENV['GOOGLE_DOCS_ADDRESS_ELEMENT']}" => @address,
                                   "#{ENV['GOOGLE_DOCS_IP_ADDRESS_ELEMENT']}" => '127.0.0.1',
-                                  "draftResponse" => "[,,\"-5388958579521340185\"]",
-                                  "fbzx" => "-5388958579521340185",
+                                  "draftResponse" => ENV['GOOGLE_DOCS_DRAFT_RESPONSE_VALUE'],
+                                  "fbzx" => ENV['GOOGLE_DOCS_FBZX_VALUE'],
                                   "pageHistory" => 0
                               })
 
