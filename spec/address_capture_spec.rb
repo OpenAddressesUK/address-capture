@@ -6,13 +6,10 @@ describe AddressCapture do
     @address = '29 Acacia Road, Nuttytown, BAN 123'
   end
 
-  it "should post to Google Docs" do
-    expect(HTTParty).to receive(:post).with(ENV['GOOGLE_DOCS_FORM_URL'], body: {
-                                  "#{ENV['GOOGLE_DOCS_ADDRESS_ELEMENT']}" => @address,
-                                  "#{ENV['GOOGLE_DOCS_IP_ADDRESS_ELEMENT']}" => '127.0.0.1',
-                                  "draftResponse" => ENV['GOOGLE_DOCS_DRAFT_RESPONSE_VALUE'],
-                                  "fbzx" => ENV['GOOGLE_DOCS_FBZX_VALUE'],
-                                  "pageHistory" => 0
+  it "should post to Sorting Office" do
+    expect(HTTParty).to receive(:post).with("http://sorting-office.openaddressesuk.org/address", body: {
+                                  address: @address,
+                                  contribute: true
                               })
 
     post '/', {
