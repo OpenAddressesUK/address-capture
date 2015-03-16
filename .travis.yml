@@ -15,6 +15,6 @@ deploy:
   strategy: api
   api_key:
     secure: Tp/mzjwdc361UhjWUotdcmx1RgZLpzIEIdA8qaO02BkBywamdoNhI/rh4kpIeocR6aGlWjfppiYAp0+oI10BN1sifUa7qeXA5CA0stBavomT/yxxsUFBJvDi/yrPn3SWTRm1mwymVkRI165i1S8dGb8TETqGiDXon6znSQq3Eg8=
-  app: powerful-depths-1407
+  app: oa-address-capture
   on:
     repo: OpenAddressesUK/address-capture
